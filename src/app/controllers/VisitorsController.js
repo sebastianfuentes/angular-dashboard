@@ -9,21 +9,21 @@
         var vm = this;
 
         // TODO: move data to the service
-        vm.visitorsChartData = [ {key: 'Mobile', y: 5264}, { key: 'Desktop', y: 3872} ];
+        vm.visitorsChartData = [ {key: 'Mobile', y: .33}, { key: 'Desktop', y: .66} ];
 
         vm.chartOptions = {
             chart: {
                 type: 'pieChart',
                 height: 210,
-                donut: true,
+                donut: false,
                 x: function (d) { return d.key; },
                 y: function (d) { return d.y; },
-                valueFormat: (d3.format(".0f")),
+                valueFormat: (d3.format(".0%")),
                 color: ['rgb(240, 250, 36)', '#000'],
                 showLabels: false,
                 showLegend: true,
                 title: '',
-                margin: { top: -10 }
+                margin: { top: 0 }
             }
         };
     }

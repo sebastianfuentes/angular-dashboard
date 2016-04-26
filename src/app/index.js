@@ -13,13 +13,6 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies', 'ngTouch',
         controllerAs: 'vm',
         abstract: true
       })
-      .state('home.dashboard', {
-        url: '/dashboard',
-        templateUrl: 'app/views/dashboard.html',
-        data: {
-          title: 'Dashboard'
-        }
-      })
       .state('home.profile', {
         url: '/profile',
         templateUrl: 'app/views/profile.html',
@@ -36,6 +29,20 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies', 'ngTouch',
         templateUrl: 'app/views/table.html',
         data: {
           title: 'Table'
+        }
+      })
+      .state('home.dashboard', {
+        url: '/dashboard',
+        templateUrl: 'app/views/dashboard.html',
+        data: {
+          title: 'Dashboard'
+        }
+      })
+      .state('home.google-analytics', {
+        url: '/dashboard/google-analytics',
+        templateUrl: 'app/views/internal.html',
+        data: {
+          title: 'Google Analytics dashboard'
         }
       });
 
