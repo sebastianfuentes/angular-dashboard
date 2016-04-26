@@ -46,7 +46,7 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies', 'ngTouch',
         .primaryPalette('grey', {
           'default': '600'
         })
-        .accentPalette('teal', {
+        .accentPalette('yellow', {
           'default': '500'
         })
         .warnPalette('defaultPrimary');
@@ -65,19 +65,19 @@ angular.module('angularMaterialAdmin', ['ngAnimate', 'ngCookies', 'ngTouch',
 
     $mdThemingProvider.definePalette('defaultPrimary', {
       '50':  '#FFFFFF',
-      '100': 'rgb(255, 198, 197)',
-      '200': '#E75753',
-      '300': '#E75753',
-      '400': '#E75753',
-      '500': '#E75753',
-      '600': '#E75753',
-      '700': '#E75753',
-      '800': '#E75753',
-      '900': '#E75753',
-      'A100': '#E75753',
-      'A200': '#E75753',
-      'A400': '#E75753',
-      'A700': '#E75753'
+      '100': 'rgb(240, 250, 36)',
+      '200': '#37474F',
+      '300': '#37474F',
+      '400': '#37474F',
+      '500': '#37474F',
+      '600': '#37474F',
+      '700': '#37474F',
+      '800': '#37474F',
+      '900': '#37474F',
+      'A100': '#37474F',
+      'A200': '#37474F',
+      'A400': '#37474F',
+      'A700': '#37474F'
     });
 
     $mdIconProvider.icon('user', 'assets/images/user.svg', 64);

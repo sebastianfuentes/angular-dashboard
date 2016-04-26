@@ -1,0 +1,751 @@
+// variables
+
+text-color = #222
+font-size = 1em
+grey = #333
+header-height = 3.5em
+yellow = #DAFF01
+rightc = 30em
+leftc = calc(99.605% - 30em)
+lgrey =  #D6D6D6
+llgrey =  #EAEAEA
+menu-width = 20em
+condensed = "Roboto Condensed"
+mobile = 639px
+mini-mobile = 376px
+tablet = 799px
+desktop = 1200px
+logo-height = 197px
+logo-width = 400px
+// fontawesome
+@import 'normalize'
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons")
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700")
+// @font-face 
+//     font-family 'FontAwesome'
+//     src url('../fonts/fontawesome-webfont.eot?v=4.2.0')
+//     src url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg')
+//     font-weight normal
+//     font-style normal
+    
+// style
+
+html
+  color #222
+  font-size 16px
+  line-height 1.4
+  font-family Helvetica
+
+body
+  margin 0
+
+::-moz-selection
+  background #b3d4fc
+  text-shadow none
+
+::selection
+  background #b3d4fc
+  text-shadow none
+a,
+a:active,
+a:visited
+  text-decoration none
+  color #222
+  
+hr
+  display block
+  height 1px
+  border 0
+  border-top 1px solid #ccc
+  margin 1em 0
+  padding 0
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+  vertical-align middle
+
+fieldset
+  border 0
+  margin 0
+  padding 0
+
+textarea
+  resize none
+  
+vendor(prop, args)
+    -webkit-{prop} args
+    -moz-{prop} args
+    {prop} args  
+
+border-radius()
+  vendor('border-radius', arguments)
+
+box-shadow()
+  vendor('box-shadow', arguments)
+  
+transform()
+  vendor('transform', arguments)
+  
+transition()
+  vendor('transition', arguments)
+  
+column-gap()
+  vendor('column-gap', arguments)
+  
+column-count()
+  vendor('column-count', arguments)
+  
+column-rule()
+  vendor('column-rule', arguments)
+  
+user-select()
+  vendor('user-select', arguments)
+  
+animation()
+  vendor('animation', arguments)
+  
+animation-delay()
+  vendor('animation-delay', arguments)
+
+.background-cover
+  background-size cover
+  background-position center center
+  background-repeat no-repeat
+  
+.background-cover-left
+  background-size cover
+  background-position left center
+  background-repeat no-repeat
+  
+.browserupgrade
+  margin 0.2em 0
+  background #ccc
+  color #000
+  padding 0.2em 0
+
+.header
+  width 100%
+  background-color grey
+  position fixed
+  top 0
+  left 0
+  right 0
+  height header-height
+  overflow hidden
+  box-shadow 0 1px 1px rgba(0,0,0,0.2)
+  z-index 9999999
+  div
+    display inline-block
+  .menu
+    width menu-width
+    background #fff
+    height header-height
+    display inline-block
+    z-index 99999
+    position relative
+    
+    .logo
+      display inline-block
+      position absolute
+      right 0
+      top 0
+      margin .7em 2em
+      width 6em
+      
+      img
+        width 100%
+        height 100%
+
+    .burger
+      display inline-block
+      height header-height
+      width header-height
+      position absolute
+      background yellow
+      cursor pointer
+      
+      &:hover
+        background #c9e800
+        transition .3s ease
+        
+      i
+        display block
+        position absolute
+        left 0
+        right 0
+        font-size 2.7em
+        font-weight 400
+        color #fff
+        padding 7px
+        user-select none        
+        
+    .burger.active
+      background #c9e800
+    
+    @media screen and (max-width: mobile)
+      width calc(100% - 3.5em)
+  @media screen and (max-width: mobile)
+    overflow initial
+
+  .searchbar
+    display inline-block
+    height header-height
+    width header-height
+    position absolute
+    top 0
+    right 0
+    cursor pointer
+    background-color grey
+    z-index 999999
+
+    .search-icon
+      height 3.5em
+      width 3.5em
+      background-image url("../img/searchWhite.png")
+      background-repeat no-repeat
+      background-size cover cover
+      background-position center center
+      display block
+      position absolute
+      top 0
+      right 0
+      z-index 100000
+      
+    .search-icon.active
+      background-image url("../img/seachBlack.png")
+
+    input[type="text"]
+      display block
+      border none
+      height header-height
+      margin-left 5em
+      color #666
+      &:focus
+        outline: none
+      
+      @media screen and (max-width: mobile)
+        position absolute
+        z-index 99999
+nav
+  display block
+  height calc(100% - 3.5em)
+  width menu-width
+  position fixed
+  // scroll from top
+  // left 0
+  // top -100%
+  // scroll from left
+  top 3.5em
+  left -100%
+  background #eaeaea
+  z-index 99999
+  font-family condensed
+  
+  ul
+    display block
+    width menu-width
+    margin 0
+    padding 3em 0 3em 1.5em
+    
+    li
+      list-style: none
+      margin 1em 0
+      font-weight normal
+      text-transform none
+      padding-left 0
+      
+      .submenu
+        display none
+
+    #services:hover          
+      .submenu
+        display block
+        padding 0 0 .5em 2em
+        width 100%
+        font-size 14px
+        height 100%
+        animation dropdown .3s ease-in-out        
+        a
+          width 100%
+          display block
+          
+        .son
+          font-weight 300
+          &:last-of-type
+            @media screen and (max-width: mobile)
+              margin-bottom 0
+
+          @media screen and (max-width: mobile)
+            margin .25em
+            font-size 1.3em
+        
+        @media screen and (max-width: mobile)
+          padding-bottom 0
+          padding-top .5em
+          
+      .submenu.mobile
+        display none
+      
+    li.father
+      font-weight bolder
+      text-transform uppercase
+      background-image url('../img/add.png')
+      background-repeat no-repeat
+      background-size 11px
+      background-position 7px 5px
+      padding-left 2em
+      font-size 1em
+      
+      a
+        display block
+        width 100%
+        // border-bottom 1px solid llgrey
+      
+    li.father.active > a
+      // border-bottom 1px solid yellow
+      display inline-block
+      width auto
+      background yellow
+      transition .3s ease-in-out
+
+    li.father.active
+      background-position 7px 10px
+      background-image url('../img/remove.png')
+      
+      
+    li.father.this > a
+      // border-bottom 1px solid yellow
+      display inline-block
+      width auto
+      background yellow
+      transition .3s ease-in-out
+      
+    @media screen and (max-width: mobile)
+      padding-top 0
+      padding-bottom 0
+    
+  .inner
+    display block
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    width calc(100% - 2em)
+    margin 0 auto
+    text-align center
+    padding 1em 0
+    
+    .social
+      height 2em
+      display inline-block
+      @media screen and (max-width: mobile)
+        height 1.7em
+      
+      img
+        height 100%
+        width auto
+
+    .social.twitter
+        padding-top 5px
+        
+    .social.google
+        padding-top 3px
+        
+    .privacy
+      padding-top 2em
+      
+      @media screen and (max-width: mobile)
+        padding-top 1em
+        
+        @media (max-height: 481px)
+          padding-top .4em
+        
+  
+
+  @media screen and (max-width: mobile)
+    width 100%
+    
+     
+nav.active
+  box-shadow 5px 20px 20px rgba(0, 0, 0, .3)
+  z-index 99999
+  opacity 1
+  &:hover
+    background #ebebeb
+    transition .3s
+      
+.container-wrapper
+  display block
+  position: absolute
+  height calc(100% - 3.5em)
+  top header-height
+  width 100%
+  overflow hidden
+
+.container-wrapper.index
+  .container
+    height 100%
+    margin 0
+    padding 0
+    display inline-block
+    position relative
+    
+  .container.intro
+    background yellow
+    
+    .additional-options
+      background lgrey
+      position: absolute
+      bottom -8em
+      left 0
+      right 0
+      height 10em
+      border-top 1px solid #fff
+      
+      div
+        display: inline-block
+        
+      ul
+        list-style none
+        list-type none
+        display block
+        
+        li
+          display inline-block
+          width 10em
+          &:before
+            font-size 3em
+  .container.contact
+    // background rgba(218,255,1,.8)   
+    background rgba(255,255,255,.8) 
+    outline none 
+     
+    .form
+      width 80%
+      margin 2em auto 0
+      
+      .contact-us
+        font-size 1.5em
+        color #555
+        font-weight bolder
+        text-transform uppercase
+        margin-bottom 2em
+        font-family condensed
+      .text
+        display block  
+        padding 1em 0 0
+        
+        @media screen and (max-width: mobile)
+          line-height 1.2em
+          font-size .89em
+        
+      form
+        margin-top 2em
+        
+        textarea,
+        input
+          border 1px solid #f0f0f0
+          background #f0f0f0
+          border-radius none
+          display block
+          margin-bottom .5em
+          width 100%
+          padding .5em 1em 
+          color #666
+          
+          &:hover
+            background #e0e0e0
+            
+          &:focus
+            background #e0e0e0
+
+        input.submit
+          color #fff
+          width  6em
+          margin-left auto
+          margin-right 0
+          background grey
+          border 2px solid grey
+          
+          &:hover
+            background #fff
+            color #444
+            border 2px solid #444
+            transition .3s ease
+
+  .container.map
+    // width 100%
+    // position: absolute
+    
+    .mapc
+      display block
+      height 50%
+      position relative
+      z-index -1
+      
+      &:first-of-type
+        border-bottom 1px solid #fff
+      span,
+      a
+        display none
+    
+    @media screen and (max-width: mobile)
+      display none
+
+  .container.background
+    @extend .background-cover-left
+    background-image url("../img/background.jpg")
+    
+    .logo
+      height logo-height
+      width logo-width
+      position absolute
+      top 0
+      right -6.9em
+      bottom 0
+      margin-top auto
+      margin-bottom auto
+      margin-right 0
+      z-index 1
+      @extend .background-cover
+      background-image url("../img/logo-big.png")
+      
+      @media screen and (max-width: mobile)
+         right 0
+         left 0
+         margin 2em auto auto
+         height (logo-height/1.2)
+         width (logo-width/1.2)
+         
+      @media screen and (max-width: mini-mobile)
+         margin 1em auto auto
+         width (logo-width/1.5)
+         height (logo-height/1.5)
+         
+    @media screen and (max-width: mobile)
+      z-index -1
+    
+  .container.content-image
+    background-color #fff
+    
+    .fader
+      width 100%
+      position absolute
+      height 100%
+      @extend .background-cover-left
+      // not working css animation
+      // &:nth-child(1)
+      //   animation: fadeBackground 18s 12s ease-in-out infinite;
+      // &:nth-child(2)
+      //   animation: fadeBackground 18s 6s ease-in-out infinite;
+      // &:nth-child(3)
+      //   animation: fadeBackground 18s 0s ease-in-out infinite;
+      // @keyframes fadeBackground {
+      //   0% {
+      //     opacity:1;
+      //   }
+      //   17% {
+      //     opacity:1;
+      //   }
+      //   25% {
+      //     opacity:1;
+      //   }
+      //   40%{
+      //     opacity: 1;
+      //   }
+      //   45%{
+      //     opacity: 0;
+      //   }
+      //   92% {
+      //     opacity:0;
+      //   }
+      //   100% {
+      //     opacity:1;
+      //   }
+      // }
+    
+  .container.content
+    
+    .content-text
+      width 100%
+      height 100%
+      overflow-y auto
+      user-select none
+      outline none
+
+    .title
+      text-transform uppercase   
+      font-size 1.5em
+      font-weight bold
+      text-align right
+      padding .5em .5em
+      color grey
+      font-family condensed
+
+    .subtitle
+      text-transform uppercase
+      font-size 1.2em
+      font-weight 400
+      text-align right
+      
+      span
+        max-width 15em
+        display inline-block
+        background yellow
+        padding 0 1em
+        text-align left
+        
+    .inner-content
+      display block
+      margin-top 25%
+
+      .parragraph
+        width 100%
+        padding 2em 2em
+        column-count 2
+        column-gap 4em
+        column-rule 1px solid llgrey
+        text-align justify
+        font-size .83em
+        line-height 1.7em
+      
+        @media screen and (max-width: mobile)
+          column-count 1
+          line-height 1.4em
+
+@keyframes dropdown {
+  from {
+    height: 0
+  }
+  to {
+    height: 17em;
+  }
+}
+
+@media print,
+   (-o-min-device-pixel-ratio: 5/4),
+   (-webkit-min-device-pixel-ratio: 1.25),
+   (min-resolution: 120dpi)
+  .hidden
+    display none !important
+    visibility hidden
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi)
+  .visuallyhidden
+    border 0
+    clip rect(0 0 0 0)
+    height 1px
+    margin -1px
+    overflow hidden
+    padding 0
+    position absolute
+    width 1px
+  .invisible
+    visibility hidden
+  .clearfix
+    *zoom 1
+    &:after
+      clear both
+
+  .visuallyhidden.focusable:active
+    clip auto
+    height auto
+    margin 0
+    overflow visible
+    position static
+    width auto
+
+  .clearfix:before
+    content " "
+    display table
+@media print
+  a[href]:after
+    content " (" attr(href) ")"
+  abbr[title]:after
+    content " (" attr(title) ")"
+  thead
+    display table-header-group
+  img
+    max-width 100% !important
+
+/*Js Scroll Pane*/
+.jspContainer
+  overflow hidden
+  position relative
+
+.jspPane
+  position absolute
+
+.jspVerticalBar
+  position absolute
+  top 0
+  right 0
+  width 10px
+  height 100%
+  background red
+  .jspArrow
+    height 16px
+    &:focus
+      outline none
+
+.jspHorizontalBar
+  position absolute
+  bottom 0
+  left 0
+  width 100%
+  height 16px
+  background red
+  .jspCap
+    float left
+  .jspArrow
+    width 7px
+    float left
+    height 100%
+
+.jspCap
+  display none
+
+.jspTrack
+  background #ddd
+  position relative
+
+.jspDrag
+  background #bbb
+  position relative
+  top 0
+  left 0
+  cursor pointer
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+  float left
+  height 100%
+
+.jspArrow
+  background #50506d
+  text-indent -20000px
+  display block
+  cursor pointer
+  padding 0
+  margin 0
+  &.jspDisabled
+    cursor default
+    background #80808d
+
+.jspCorner
+  background #eeeef4
+  float left
+  height 100%
+
+*
+  html
+    .jspCorner
+      margin 0 -3px 0 0
+

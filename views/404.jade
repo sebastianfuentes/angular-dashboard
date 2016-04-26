@@ -1,0 +1,39 @@
+extends layout
+
+block content
+	section#main.container-wrapper.index
+		section.container.large-8.medium-6.small-12.columns.background.not-found
+			a(href="/")
+					.logo.not-found
+		section.container.large-4.medium-6.small-12.columns.intro
+			#additional.additional-options
+				a(href="/blog")
+						.blog-logo
+							span.turn TURN
+							span.blog BLOG
+							span.plus
+								i#add.material-icons add
+			//- .share
+			//- 		ul
+			//- 			li.fa.fa-facebook
+			//- 			li.fa.fa-twitter
+			//- 			li.fa.fa-facebook
+			//- 			li.fa.fa-twitter
+	script(type='text/javascript').
+		$(document).ready(function(){
+			if (! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			setTimeout(function (){
+				menu = $(".menu");
+				menu.addClass("active")
+				$("nav").animate({
+					// top: "3.5em",
+					left: "0",            
+					display: "block"
+				}, 500);
+				$(".burger").addClass('active');
+				$("nav").addClass('active');
+				$("#services").mouseenter();
+				AnimateRotate(-360, 0, 1);
+				}, 1000);
+			}
+		});

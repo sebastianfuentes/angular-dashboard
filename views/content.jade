@@ -1,0 +1,31 @@
+extends layout
+block content
+	.section-container
+		.intro
+			h1= heading
+			p= intro
+		.details
+			.featured.image
+			.featured.content
+				each text in content
+					if text.subtitle
+						h2= text.subtitle
+					p= text.parragraph
+					if text.important
+						.important=text.important
+			.featured.image
+				mixin listOfImages(number)
+					ul.innerImages
+						each item in images
+							li(class=number style='background-image: url(#{item})')
+				case images.length
+					when 0
+						.none
+					when 2
+						+listOfImages('two')
+					when 3
+						+listOfImages('three')
+					when 4
+						+listOfImages('four')
+					default
+						.none

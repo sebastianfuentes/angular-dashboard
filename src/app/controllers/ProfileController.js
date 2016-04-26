@@ -10,17 +10,16 @@
     var vm = this;
 
     vm.user = {
-      title: 'Admin',
-      email: 'contact@flatlogic.com',
-      firstName: '',
-      lastName: '' ,
-      company: 'FlatLogic Inc.' ,
-      address: 'Fabritsiusa str, 4' ,
-      city: 'Minsk' ,
-      state: '' ,
-      biography: 'We are young and ambitious full service design and technology company. ' +
-      'Our focus is JavaScript development and User Interface design.',
-      postalCode : '220007'
+      title: 'Sebastian',
+      email: 'contact@turninternational.co.uk',
+      firstName: 'Sebastian',
+      lastName: 'Fuentes' ,
+      company: 'TURN International.' ,
+      address: 'Golsmith 40' ,
+      city: 'Mexico' ,
+      state: 'Mexico' ,
+      biography: 'Lorem ipsum dolor sit amet ipsicum lastem oremao. ',
+      postalCode : '11550'
     };
   }
 

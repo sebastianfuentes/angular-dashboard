@@ -1,0 +1,81 @@
+{
+	"menu" 		: {
+		"father" 		:{
+			"services"	 : "servicios",
+			"contact"	 : "contacto",
+			"blog"	 : "turn blog"
+		},
+		"child" 		:{
+			"research-and-analytics"	 : "Research & Analytics",
+			"creative-and-strategy"	 : "Estrategia Creativa",
+			"branding-and-design"	 : "Branding & Diseño",
+			"tech-innovation" : "Innovación",
+			"paid-media"	   : "Paid Media",
+			"earned-media"	   : "Earned Media",
+			"training-and-consultancy"	 : "Consultoria"
+		}
+	},
+	"fourcerofour":{
+		"title"     : "Turn International | No encontramos la pagina que estabas buscando"
+	},
+	"home":{
+		"title"     : "Turn International",
+		"content"		: {		
+			"intro"     : {
+					"text"	: "We blend innovative creativity with deep specialist experience in every area of marketing. Welcome to an agency that is personable yet serious about results.",
+					"force" : "WELCOME TO THE FORCE OF KNOWLEDGE.",
+					"blog"	: "Ir al blog"
+			},
+			"cities"    : {
+				"london":"londres",
+				"mexico":"méxico",
+				"miami":"miami"
+			},
+			"titles"		: {
+				"origins" : "nuestra filosofia",
+				"team" : "el equipo",
+				"services" : "servicios",
+				"clients" : "algunos de nuestros clientes",
+				"contact" : "Contactanos"
+			}
+		}
+	},
+	"generic" 	 : {
+		"title"     : "Turn International | Contenido Generico",
+		"heading"   : "Esto es solo contenido de muestra",
+		"intro"			: "Lorem ipsum dolor sit amet, Voluptua patrioque referrentur mel ut, mutat impertinax.Modolorem ipsum dolor sit amet, partem expetenda qui ut. Sea tempor molestie ea, ex per oratio detracto abhorreant, vix porro mucius possit at. Voluptua patrioque referrentur mel ut, mutat impedit nam no. No nostrud constituto eloquentiam mei, his ad civibus pertinax.Modo",
+		"content"      : [
+			{
+				"subtitle" 		: "lroemsadsad dsjad as",
+				"important"   : "lorem ipsum dolor sit amet consectetur",
+				"parragraph" 	: "Lorem ipsum dolor sit amet,  no. No nostrud constituto eloquentiam mei, his ad civibus pertinax.Modolorem ipsum dolor sit amet, partem expetenda qui ut. Sea tempor molestie ea, ex per oratio detracto abhorreant, vix porro mucius possit at. Voluptua patrioque referrentur mel ut, mutat impedit nam no. No nostrud constituto eloquentiam mei, his ad civibus pertinax.Modolorem ipsum dolor sit amet, partem expetenda qui ut. Sea tempor molestie ea, ex per oratio detracto abhorreant, vix porro mucius possit at. Voluptua patrioque referrentur mel ut, mutat impedit nam no. No nostrud constituto eloquentiam mei, his ad civibus pertinax.Modolorem ipsum dolor sit amet, partem expetenda qui ut. Sea tempor molestie ea, ex per oratio detracto abhorreant, vix porro mucius possit at. Voluptua patrioque referrentur mel ut, mutat impedit nam no. No nostrud constituto eloquentiam mei, his ad civibus pertinax.Modo"
+			},
+			{
+				"subtitle" 		: "lroemsadsad dsjad as",
+				"important"   : false,
+				"parragraph" 	: "Lorem ipsum dolor sit amet, partem expetendaexpetendaexpetenda qui ut., his ad civibus pertinax.ModoLorem ipsum dolor sit amet, partem expetendaexpetendaexpetenda qui ut. Sea tempor molestie ea, ex per oratio detracto abhorreant, vix porro mucius possit at. Voluptua patrioque referrentur mel ut, mutat impedit nam no. No nostrud constituto eloquentiam mei, his ad civibus pertinax dolor sit amet, partem expetenda qui ut. Sea tempor molestie ea, ex per oratio detracto abhorreant, vix porro mucius possit at. Voluptua patrioque referrentur mel ut, mutat."
+			},
+			{
+				"subtitle" : false,
+				"important"   : false,
+				"parragraph" : "Lorem ipsum dolor sit amet, partem expetendaexpetendaexpetenda qui ut., his ad civibus pertinax.ModoLorem ipsum dolor sit amet, partem expetendaexpetendaexpetenda qui ut. Sea tempor molestie ea, ex per oratio detracto abhorreant, vix porro mucius possit at. Voluptua patrioque referrentur mel ut, mutat impedit nam no. No nostrud constituto eloquentiam mei, his ad civibus pertinax dolor sit amet, partem expetenda qui ut. Sea tempor molestie ea, ex per oratio detracto abhorreant, vix porro mucius possit at. Voluptua patrioque referrentur mel ut, mutat."
+			}
+		],
+		"mainImages"		: [
+			"/images/generic/juan.png",
+			"/images/generic/cesar.png"
+		],
+		"innerImages"		: [
+			"/images/generic/juan.png",
+			"/images/generic/juan.png",
+			"/images/generic/juan.png",
+			"/images/generic/cesar.png"
+		]
+	},
+	"contacto"  : {
+		"title"     : "Turn International | Contact us"
+	},
+	"abouto"		: {
+		"title"     : "Turn International | About us"
+	}
+}

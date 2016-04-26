@@ -1,0 +1,49 @@
+extends layout
+
+block content
+	section.container-wrapper.index
+		section.container.large-7.medium-6.small-12.columns.map
+			div.mapc
+				#mapuk.mapcontainer
+			div.mapc
+				#mapmx.mapcontainer
+		section.container.large-5.medium-6.small-12.columns.contact
+			.content-text.form
+				div.contact-us Contact Us
+				div.text
+					|Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					|tempor incididunt ut labore et dolore magna aliqua.
+					ul.contact-list
+						li.phone
+							div
+								span.title MEXICO CITY
+								span 
+									a(href="tel:+55 55555555") +(52) 55 55 55 55 55
+						li.phone
+							div
+
+								span.title LONDON
+								span
+									a(href="tel:+55 55555555") +(52) 55 55 55 55 55
+						li.mail
+							div
+
+								span.title EMAIL
+								span 
+									a(href='mailto:hello@turninternational.co.uk?Subject=Hello!' target="_blank") hello@turninternational.co.uk
+
+				div.contact-us Email Enquiry
+				form(ng-controller="FormController", method='POST')
+					input(autocomplete="off",ng-model="user.name", type='text', id="name", name='name', value='', required, placeholder='Name...')
+					input(autocomplete="off",ng-model="user.email", type='email', id="email", name='email', value='', required, placeholder='Email...')
+					input(autocomplete="off",ng-model="user.subject", type='text', id="subject", name='subject', value='', required, placeholder='Subject...')
+					textarea(rows='3', id="content",ng-model="user.message", name='message', required, placeholder='Tell us more about what you are interested in...')
+					input.submit(type='submit', name='submit', value='Submit')
+
+block footerScripts
+	//- script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js')
+	script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAsGIgAvFyTmVRZvTCeYvNhm36Eqx00-4A&callback=initMaps')
+	script(src='javascripts/form.js')
+	script(src='javascripts/jquery.mousewheel.js')
+	script(src='javascripts/jscrollpane.min.js')
+	script(src='javascripts/initParragraph.js')
